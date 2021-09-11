@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center>
+		<div class="container">
+			<h1>To Do Application</h1>
+			<div id="inputTask">
+				<input id="input" type="text" name="input" placeholder="Enter new task here">
+				<button id="button" type = "button">
+						<ion-icon id="add"name="add"></ion-icon>
+				</button>
+			</div>
+			<div class= "content">
+				<form class="category" label="Category 1">
+					<fieldset>
+						<legend>Category 1</legend>
+						<ul id="categoryList">
+							<li>Task 1<span class="remove"><ion-icon class="trash" name="trash"></ion-icon></span><span class="edit"><ion-icon class="create" name="create"></ion-icon></span></li>
+							<li>Task 2<span class="remove"><ion-icon class="trash" name="trash"></ion-icon></span><span class="edit"><ion-icon class="create" name="create"></ion-icon></span></li>
+							<li>Task 3<span class="remove"><ion-icon class="trash" name="trash"></ion-icon></span><span class="edit"><ion-icon class="create" name="create"></ion-icon></span></li>
+							<li>Task 4<span class="remove"><ion-icon class="trash" name="trash"></ion-icon></span><span class="edit"><ion-icon class="create" name="create"></ion-icon></span></li>
+						</ul>
+						
+					</fieldset>
+					
+				</form>
+			</div>
+			<div>
+				<ul id="deleted">
+					Deleted
+				</ul><br><br><br><br><br><br><br><br>
+			</div>		
+		</div>
+	</center>
+
+
+	<script type="text/javascript" src="main.js"></script>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
