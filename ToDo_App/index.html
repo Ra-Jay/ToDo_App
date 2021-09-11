@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo App</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<center>
+			<h1>To Do Application</h1>
+			<div id="getInput">
+				<input class="userInt" type="text" name="input" id="input" placeholder="Enter new task here">
+				<button type = "button" class="userInt" id="button">
+					<span class="buttonIcon">
+						<ion-icon name="add"></ion-icon>
+					</span>
+				</button>
+			</div>
+		</center>
+		<div>
+			<form class="category" label="Category 1">
+				<fieldset>
+					<legend>CATEGORY 1</legend>
+					<ul id="categoryList"></ul>
+				</fieldset>
+			</form>
+		</div>
+
+		<div>
+			<ul id="deleted">
+				Deleted
+			</ul>
+
+
+		</div>		
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+</html>
