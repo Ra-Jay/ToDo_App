@@ -34,6 +34,7 @@ fieldset legend{
 	padding-left: 20px;
 	border-radius: 10px;
 	border: 1px solid #6BBFFF;
+	outline: none;
 }
 #button{ 
 	flex: 1;
@@ -99,6 +100,7 @@ fieldset legend{
 }
 #categoryList li span ion-icon{
 	height: 13px;
+	color: white;
 }
 
 .container{
