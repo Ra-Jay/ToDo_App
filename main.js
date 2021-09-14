@@ -14,17 +14,17 @@ button.addEventListener("click", function(){
 	else{
 		list.appendChild(newTask); 
 		input.value="";
-	}
+	}/*
 	// Marks the task done(line-through) when you click once
 	newTask.addEventListener("click", function(){
 		newTask.style.textDecoration= "line-through";
 		newTask.style.opacity = 0.5;
 	})
-	// Removes the task form the list when you click twice
+	// Removes the task form the list when you click twice and stores it in Deleted list
 	newTask.addEventListener("dblclick", function(){
 		deleted.appendChild(newTask);
 		list.removeChild(newTask);
-	})
+	})*/
 })
 
 	
@@ -39,25 +39,27 @@ document.addEventListener("keyup", function(event){
 			list.appendChild(newTask); 
 			input.value="";
 		}
-	}
+	}/*
+	// Marks the task done(line-through) when you click once
 	newTask.addEventListener("click", function(){
 		newTask.style.textDecoration= "line-through";
 		newTask.style.opacity = 0.5;
 	})
+	// Removes the task form the list when you click twice and stores it in Deleted list
 	newTask.addEventListener("dblclick", function(){
 		deleted.appendChild(newTask);
 		list.removeChild(newTask);
-	})
+	})*/
 })
 //updates the appearance of the "+" button when you hover above it 
 button.addEventListener("mouseover", function(){
-	button.style.backgroundColor= "#3baaff";
+	button.style.backgroundColor= "#404040";
 });
 
 button.addEventListener("mouseout", function(){
-	button.style.backgroundColor= "#6BBFFF";
+	button.style.backgroundColor= "#737373";
 });
 
 button.addEventListener("click", function(){
-	button.style.backgroundColor= "#0994ff";
+	button.style.backgroundColor= "#262626";
 });

@@ -1,26 +1,27 @@
 body{
-	background: linear-gradient( to bottom, #68EACC 0% , #497BE8 100%);
+	background: linear-gradient( to bottom, #A6A6A6 0% , #737373 100%);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+}
+div .sticky{
+	margin: 0;
+	padding: 10px;
+	position: sticky;
+	bottom: 0;
+	padding: 50px;
+	background-color: #cae8ca;
+	border: 2px solid #4CAF50;
 }
 input::placeholder{
 	opacity: .5;
 }
-#add{
-	font-size: 40px;
-	color: #ffffff;
-}
+
 fieldset{
-	height: 275px;
-	width: 200px;
-	border: 2px solid #6BBFFF;
-	border-radius: 10px;
-	padding: 0;
-	margin: 0;
+	border: none;
 }
 fieldset legend{
-	margin-left: 20px;
 }
+
 #inputTask{
 	display: flex;
 	width: 50%;
@@ -28,36 +29,39 @@ fieldset legend{
 	margin-top: 50px;
 }
 
-#input{
+#inputTask #input{
 	flex: 8;
 	font-size: 25px;
 	padding-left: 20px;
 	border-radius: 10px;
-	border: 1px solid #6BBFFF;
+	border: 1px solid #737373;
 	outline: none;
 }
-#button{ 
+
+#inputTask #button{ 
 	flex: 1;
 	margin-left: 7px;
-	background-color: #6BBFFF;
+	background-color: #737373;
 	border: none ;
 	outline: none;
 	border-radius: 10px;
 	overflow: hidden;
 	cursor: pointer;
 }
+#inputTask #button #add{
+	font-size: 40px;
+	color: #ffffff;
+}
+
 #categoryList{
-	padding:0;
+	padding:10px;
 }
 #categoryList li{
-	position: relative;
-	text-align: left;
+	text-align: center;
 	list-style: none;
-	height: 45px;
 	line-height: 30px;
 	background-color: #f2f2f2;
-	padding-left: 10px; 
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	height: 100%;
 	border-radius: 2px;
 	cursor: pointer;
@@ -70,6 +74,7 @@ fieldset legend{
 	background-color: #6BBFFF;
 	right: -25px;
 	width: 30px;
+	height: 30px;
 	text-align: center;
 	cursor: pointer;
 	transition: 0.3s;
@@ -86,6 +91,7 @@ fieldset legend{
 	background-color: #ff0000;
 	right: -25px;
 	width: 30px;
+	height: 30px;
 	text-align: center;
 	border-radius: 0 3px 3px 0;
 	cursor: pointer;
@@ -99,7 +105,7 @@ fieldset legend{
 	opacity: 1;
 }
 #categoryList li span ion-icon{
-	height: 13px;
+	padding-top: 7px;
 	color: white;
 }
 
@@ -107,12 +113,36 @@ fieldset legend{
 	width: 80%;
 }
 
-.content{
-	width:40%;
+.content {
+	width:25%;
+	max-height: 400px;
 	margin-top: 50px ;
-	background-color: #fff;
-	padding: 50px;
+	background-color: #737373;
 	border-radius: 20px;
+	overflow-x: hidden;
+}
+
+.content #footer{
+	background-color: #ffffff;
+	display: flex;
+	width: 100%;
+	height: 40px;
+	position: static;
+}
+.content h1{
+	margin-bottom: 0;
+}
+.content div input{
+	flex: 7;
+	outline: 0;
+	border: 0;
+	padding:0 10px 0;
+	text-align: left;
+}
+.content div button{
+	border: 0;
+	padding: 0 10px 0;
+	cursor: pointer;
 }
 
 #deleted{
