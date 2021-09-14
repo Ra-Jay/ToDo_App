@@ -14,7 +14,7 @@ button.addEventListener("click", function(){
 	else{
 		list.appendChild(newTask); 
 		input.value="";
-	}/*
+	}
 	// Marks the task done(line-through) when you click once
 	newTask.addEventListener("click", function(){
 		newTask.style.textDecoration= "line-through";
@@ -24,7 +24,7 @@ button.addEventListener("click", function(){
 	newTask.addEventListener("dblclick", function(){
 		deleted.appendChild(newTask);
 		list.removeChild(newTask);
-	})*/
+	})
 })
 
 	
@@ -39,7 +39,7 @@ document.addEventListener("keyup", function(event){
 			list.appendChild(newTask); 
 			input.value="";
 		}
-	}/*
+	}
 	// Marks the task done(line-through) when you click once
 	newTask.addEventListener("click", function(){
 		newTask.style.textDecoration= "line-through";
@@ -49,7 +49,7 @@ document.addEventListener("keyup", function(event){
 	newTask.addEventListener("dblclick", function(){
 		deleted.appendChild(newTask);
 		list.removeChild(newTask);
-	})*/
+	})
 })
 //updates the appearance of the "+" button when you hover above it 
 button.addEventListener("mouseover", function(){
