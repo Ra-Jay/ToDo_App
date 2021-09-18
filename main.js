@@ -53,8 +53,8 @@ function deleteItem(e) {
 	// Add a new task to the list when you click the "+" button
 button.addEventListener("click", addTask);
 	// Add a new task to the list when you press enter key
-document.addEventListener("keyup", function(event){
-	if(event.keyCode==13)
+document.addEventListener("keyup", function(e){
+	if(e.keyCode==13)
 		addTask();
 })
 list.addEventListener("click", deleteItem);
