@@ -202,6 +202,9 @@ body{
 		border-radius: 0 5px 5px 0;
 		text-align: center;
 	}
+	i{
+		pointer-events: none;
+	}
 	.category li:hover .remove{
 		right: 0px;
 		opacity: 1;
