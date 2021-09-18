@@ -1,235 +1,239 @@
 * {
-			margin: 0;
-		}
-		body{
-			background-image: linear-gradient(#A6A6A6, #737373);
-			font-family: 'Poppins', sans-serif;
-		}
-		.container{
-			margin-top: 50px;
-			width: 80%;
-		}
+	margin: 0;
+}
+body{
+	background-image: linear-gradient(#A6A6A6, #737373);
+	font-family: 'Poppins', sans-serif;
+}
+.container{
+	margin-top: 50px;
+	width: 80%;
+}
 
-		.container #head{
-			margin-top: 5px;
-			font-size: 25px;
-		}
+.container #head{
+	margin-top: 5px;
+	font-size: 25px;
+}
 
-		.content .inputTask{
-			display: flex;
-			width: 90%;
-			margin: 10px 0 20px;
-			height: 40px;
+.content .inputTask{
+	display: flex;
+	width: 90%;
+	margin: 10px 0 20px;
+	height: 40px;
 
-		}
+}
 
-		.inputTask input{
-			flex: 7;
-			margin-right: 5px;
-			padding: 5px;
-			border: 0;
-			border-radius: 5px;
-			font-size: 16px;
-			outline: none;
-			border: 1.5px solid #737373;
-		}
+.inputTask input{
+	flex: 7;
+	margin-right: 5px;
+	padding: 5px;
+	border: 0;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none;
+	border: 1.5px solid #737373;
+}
 
-		.inputTask button{
-			flex: 1;
-			background-color: #6bbfff;
-			border: 0;
-			border-radius: 5px;
-		}
-		.inputTask button:active{
-			color:  white;
-			background-color: #262626;
-		}
+.inputTask button{
+	flex: 1;
+	background-color: #6bbfff;
+	border: 0;
+	border-radius: 5px;
+}
+.inputTask button:active{
+	color:  white;
+	background-color: #262626;
+}
 
-		.inputTask button #add{
-			font-size: 20px;
-			color: white;
-		}
+.inputTask button #add{
+	font-size: 20px;
+	color: white;
+}
 
-		.content{
-			background-color: #737373;
-			width:  90%;
-			height: 490px;
-			border-radius: 10px;
-			padding:10px 0 10px;
-		}
+.content{
+	background-color: #737373;
+	width:  90%;
+	height: 490px;
+	border-radius: 10px;
+	padding:10px 0 10px;
+}
 
-		.category ul{
-			width: 90%;
-			padding: 0 10px 0;
-			height: 330px;
-			max-height: 330px;
-			overflow-x: auto;
-		}
-		.category div input{
-			float: left;
-			width: 15px;
-			height: 100%;
-			margin-right: 10px;
-		}
-		.category li{
-			list-style: none;
-			background-color: #f3f3f3;
-			margin: 10px 0 10px;
-			text-align: left;
-			line-height: 30px;
-			border-radius: 5px;
-			padding: 0 20px 0;
-			overflow: hidden;
-		}
-		.category li:active{
-			background-color: #a2a2a2;
-			font-size: 20px;
-		}
+.category ul{
+	width: 90%;
+	padding: 0 10px 0;
+	height: 330px;
+	max-height: 330px;
+	overflow-x: auto;
+}
+.category div input{
+	float: left;
+	width: 15px;
+	height: 100%;
+	margin-right: 10px;
+}
+.category li{
+	list-style: none;
+	background-color: #f3f3f3;
+	margin: 10px 0 10px;
+	text-align: left;
+	line-height: 30px;
+	border-radius: 5px;
+	padding: 0 20px 0;
+	overflow: hidden;
+}
+.category li:active{
+	background-color: #a2a2a2;
+	font-size: 20px;
+}
 
-		.category li span{
-			font-size: 15px;
-			visibility: hidden;
-		}
-		.category li .edit{
-			width: 35px;
-			background-color: #6bbfff;
-			color: white;
-		}
-		.category li .remove{
-			width: 35px;
-			background-color: #ff0000;
-			color: white;
-		}
-		.content .footer{	
-			display: flex;
-			height: 40px;
-			width: 90%;
-			margin: 5px 0 15px;
-		}
-		.footer #progressBar{
-			flex: 3;
-			background: linear-gradient(to right, #6bbfff 0%, white 50%);
-			text-align: center;
-			margin: auto;
-			padding: 5px 0 5px;
-			border-color: 1px solid #A6A6A6;
-			border-radius: 20px;
-		}
-		.footer #removeAll{
-			flex: 1;
-			float: right;
-			margin: auto;
-			margin-left: 20px;
-			border: 0;
-			border-radius: 5px;
-			border-color: 1px solid #A6A6A6;
-			height: 30px;
-			background-color: #ff0000;
-			color: white;
-		}
-		.footer #removeAll:active{
-			background-color:  #cc0000;
-		}
+.category li span{
+	font-size: 15px;
+}
+.category li .edit{
+	width: 35px;
+	background-color: #6bbfff;
+	color: white;
+}
+.category li .remove{
+	width: 35px;
+	background-color: #ff0000;
+	color: white;
+}
+.content .footer{	
+	display: flex;
+	height: 40px;
+	width: 90%;
+	margin: 5px 0 15px;
+}
+.footer #progressBar{
+	flex: 3;
+	background: linear-gradient(to right, #6bbfff 0%, white 50%);
+	text-align: center;
+	margin: auto;
+	padding: 5px 0 5px;
+	border-color: 1px solid #A6A6A6;
+	border-radius: 20px;
+}
+.footer #removeAll{
+	flex: 1;
+	float: right;
+	margin: auto;
+	margin-left: 20px;
+	border: 0;
+	border-radius: 5px;
+	border-color: 1px solid #A6A6A6;
+	height: 30px;
+	background-color: #ff0000;
+	color: white;
+}
+.footer #removeAll:active{
+	background-color:  #cc0000;
+}
 
 
-		@media only screen and (min-width: 1000px){
-			.content .inputTask{
-				width: 90%;
-				height: 50px;
-			}
-			.inputTask button #add{
-				font-size: 25px;
-			}
-			.inputTask button:hover{
-				background-color: #3aa9ff;
-				color: white;
-				cursor: pointer;
-				box-shadow: 10px red;
-			}
-			.inputTask button:active{
-				background-color: #0793ff;
-			}
+@media only screen and (min-width: 1000px){
+	.content .inputTask{
+		width: 90%;
+		height: 50px;
+	}
+	.inputTask button #add{
+		font-size: 25px;
+	}
+	.inputTask button:hover{
+		background-color: #3aa9ff;
+		color: white;
+		cursor: pointer;
+		box-shadow: 10px red;
+	}
+	.inputTask button:active{
+		background-color: #0793ff;
+	}
 
-			.content{
-				width:  50%;
-				height: 595px;
-				position: relative;
-			}
-			.category ul{
-				height: 420px;
-				max-height: 420px;
-			}
-			.category div{
-				height: 40px;
-			}
-			.category div input{
-				float: left;
-				width: 15px;
-				height: 100%;
-				margin-right: 10px;
-			}
-			.category li{
-				line-height: 40px;
-				position: relative;
-				margin: 10px 0 10px;
-				cursor: default;
-				transition: all 0.1s ease;
-				cursor: auto;
-			}
-			.category li:hover{
-				background-color: #a2a2a2;
-				font-size: 20px;
-			}
-			.category li span{
-				position: absolute;
-				visibility: visible;
-				opacity: 0;
-				cursor: pointer;
-				transition: all 0.3s ease;
-				height: 100%;
-			}
-			.category li .edit{
-				right: -50px;
-				opacity: 0;
-				text-align: center;
-			}
-			.category li .remove{
-				right: -50px;
-				border-radius: 0 5px 5px 0;
-				text-align: center;
-			}
-			.category li:hover .remove{
-				right: 0px;
-				opacity: 1;
-			}
-			.category li .remove:active{
-				background-color: #470000;
-			}
-			.category li:hover .edit{
-				right: 35px;
-				opacity: 1;
-			}
-			.category li .edit:active{
-				background-color: #0199ff;
-			}
-			#footer button:hover{
-				background-color: #737373;
-				color: white;
-				cursor: pointer;
-			}
-			#footer button:active{
-				background-color: #262626;
-			}
-			.content #footer{
-				position: absolute;
-			}
-			.footer #removeAll{
-				margin-left: 50px;
-				height: 40px;
-			}
-			#task1{				
-				text-decoration: line-through;
-				background-color: #a2a2a2;
-				opacity: 0.4;
-			}			
-		}
+	.content{
+		width:  50%;
+		height: 595px;
+		position: relative;
+	}
+	.category ul{
+		height: 420px;
+		max-height: 420px;
+	}
+	.category div{
+		height: 40px;
+	}
+	.category div input{
+		float: left;
+		width: 15px;
+		height: 100%;
+		margin-right: 10px;
+	}
+	.category div input:checked + li{
+		text-decoration: line-through;
+		background-color: #a2a2a2;
+		opacity: 0.5;
+	}
+	.category li{
+		line-height: 42px;
+		position: relative;
+		margin: 10px 0 10px;
+		cursor: default;	
+		transition: all 0.1s ease;
+	}
+	.category li:hover{
+		background-color: #a2a2a2;
+		font-size: 20px;
+	}
+	
+	.category span{
+		position: absolute;
+		visibility: visible;
+		opacity: 1;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		height: 100%;
+	}
+	.category .edit{
+		right: -50px;
+		opacity: 1;
+		text-align: center;
+	}
+	.category .remove{
+		right: -50px;
+		border-radius: 0 5px 5px 0;
+		text-align: center;
+	}
+	.category li:hover .remove{
+		right: 0px;
+		opacity: 1;
+	}
+	.category .remove:active{
+		background-color: #470000;
+	}
+	.category li:hover .edit{
+		right: 35px;
+		opacity: 1;
+	}
+	.category .edit:active{
+		background-color: #0199ff;
+	}
+	#footer button:hover{
+		background-color: #737373;
+		color: white;
+		cursor: pointer;
+	}
+	#footer button:active{
+		background-color: #262626;
+	}
+	.content #footer{
+		position: absolute;
+	}
+	.footer #removeAll{
+		margin-left: 50px;
+		height: 40px;
+	}
+	#task1{				
+		text-decoration: line-through;
+		background-color: #a2a2a2;
+		opacity: 0.4;
+	}			
+}
