@@ -10,7 +10,7 @@ function addTask(){
 	newTask.innerHTML =`<input class="checkStatus" type="Checkbox" name="" >`;
 	//create new li to store the input value and append it to the newTask div
 	var item = document.createElement("li");
-	item.innerHTML = `<input id="todoItem" type="text" value="${input.value}" readonly>`;
+	item.innerHTML = `<span id="todoItem">${input.value}</span>`;
 	newTask.appendChild(item);
 	//create span tag to store the edit icon and append it to the li tag
 	var editButton = document.createElement("span");
@@ -37,52 +37,52 @@ function addTask(){
 	})*/
 }
 
+//Delete item
 function deleteItem(e) { 
   var item = e.target;
-  if(item.classList[0] === "remove"){
-	  var bin = item.parentElement;
-	  bin.parentElement.remove();
-  }
+  
 }
+
+//Edit item
 function editItem(e) { 
-		var item = e.target;
-		if(item.textContent === "save"){
-			var li = item.parentElement;
-			var input = document.getElementById("todoItem");
-			var newVal = document.createElement("input");
-			newVal.value = input.value;
-			newVal.readOnly = true;
-			newVal.id = "todoItem"
-			li.insertBefore(newVal, input);
-			li.removeChild(input);
-			item.innerHTML= `<i class="fa fa-pencil create" aria-hidden="true"></i>`;
-			item.style.padding = "0";
-		}else if(item.classList[0] === "edit"){
-			var li = item.parentElement;
-			//item.className = "newTodo";
-			var input = document.getElementById("todoItem");
-			var newInt = document.createElement("input");
-			newInt.type = "text";
-			newInt.id = "todoItem"
-			newInt.value = input.value;
-			li.insertBefore(newInt, input);
-			li.removeChild(input);
-			item.textContent = "save";
-			item.style.padding = "5px 0 0 0";
-			newInt.style.fontSize ="15px";
-			if(newInt.value == ""){
-				alert("please input something");
-			}
-		}
+	var item = e.target;
+	var li = item.parentNode;
+	if(item.classList[0] === "remove"){
+		var bin = item.parentElement;
+		bin.parentElement.remove();
+  	}
+	else if(item.textContent === "save"){
+		var input = li.firstElementChild;
+		var span = document.createElement('span');
+		span.textContent = input.value;
+		span.id = "todoItem"
+		li.insertBefore(span, input);
+		li.removeChild(input);
+		item.innerHTML= `<i class="fa fa-pencil create" aria-hidden="true"></i>`;
+		item.style.padding = "0";
+	}
+	else if(item.classList[0] === "edit"){
+		var span = li.firstElementChild;
+		var input = document.createElement("input");
+		input.type = "text";
+		input.id = "todoItem"
+		input.value = span.textContent;
+		li.insertBefore(input, span);
+		li.removeChild(span);
+		item.textContent = "save";
+		item.style.padding = "5px 0 0 0";
+		newInt.style.fontSize ="16px";	
+	}
 }
+
+
 //EVENT LISTENERS
 
-	// Add a new task to the list when you click the "+" button
-button.addEventListener("click", addTask);
-	// Add a new task to the list when you press enter key
-document.addEventListener("keyup", function(e){
+	
+button.addEventListener("click", addTask);//Add a new task to the list when you click the "+" button
+document.addEventListener("keyup", function(e){ //Add a new task to the list when you press enter key
 	if(e.keyCode==13)
 		addTask();
 })
-list.addEventListener("click", deleteItem);
-list.addEventListener("click", editItem);
+list.addEventListener("click", deleteItem); //Deletes item 
+list.addEventListener("click", editItem); //Edit selected item

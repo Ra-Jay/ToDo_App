@@ -191,11 +191,12 @@ body{
 	.category li #todoItem{
 		background: none;
 		border: 0;
-		font-size: 15px;
+		font-size: 16px;
 		width: 100%;
 		outline: none;
+		line-height: 40px;
 	}
-	.category #taskList div:hover input{
+	.category #taskList div:hover #todoItem{
 		font-size: 20px;
 	}
 	.category div li i{
@@ -207,7 +208,7 @@ body{
 		font-size: 20px;
 	}
 	
-	.category span{
+	.category span {
 		position: absolute;
 		visibility: visible;
 		opacity: 1;
