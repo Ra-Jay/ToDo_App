@@ -20,13 +20,12 @@ body{
 	width: 90%;
 	margin: 10px 0 20px;
 	height: 40px;
-
 }
 
 .inputTask input{
 	flex: 7;
 	margin-right: 5px;
-	padding: 5px;
+	padding: 5px 10px 5px;
 	border: 0;
 	border-radius: 5px;
 	font-size: 16px;
@@ -90,6 +89,11 @@ body{
 	font-size: 15px;
 }
 .category li .edit{
+	width: 35px;
+	background-color: #6bbfff;
+	color: white;
+}
+.category li .newTodo{
 	width: 35px;
 	background-color: #6bbfff;
 	color: white;
@@ -168,17 +172,36 @@ body{
 		margin-right: 10px;
 	}
 	.category div input:checked + li{
-		text-decoration: line-through;
 		background-color: #a2a2a2;
 		opacity: 0.5;
 	}
-	.category li{
-		line-height: 42px;
+
+	.category div input:checked + li #todoItem{
+		text-decoration: line-through;
+	}
+	
+	.category li, #todoItem{
+		height: 100%;
 		position: relative;
-		margin: 10px 0 10px;
 		cursor: default;	
 		transition: all 0.1s ease;
+		padding: 0 5px 0;
 	}
+
+	.category li #todoItem{
+		background: none;
+		border: 0;
+		font-size: 15px;
+		width: 100%;
+		outline: none;
+	}
+	.category #taskList div:hover input{
+		font-size: 20px;
+	}
+	.category div li i{
+		padding-top: 13px;
+	}
+
 	.category li:hover{
 		background-color: #a2a2a2;
 		font-size: 20px;
@@ -196,11 +219,19 @@ body{
 		right: -50px;
 		opacity: 1;
 		text-align: center;
+		height: 100%;
+	}
+	.category .newTodo{
+		right: -50px;
+		opacity: 1;
+		text-align: center;
+		height: 100%;
 	}
 	.category .remove{
 		right: -50px;
 		border-radius: 0 5px 5px 0;
 		text-align: center;
+		height: 100%;
 	}
 	i{
 		pointer-events: none;
@@ -216,7 +247,14 @@ body{
 		right: 35px;
 		opacity: 1;
 	}
+	.category li:hover .newtodo{
+		right: 35px;
+		opacity: 1;
+	}
 	.category .edit:active{
+		background-color: #0199ff;
+	}
+	.category .newTodo:active{
 		background-color: #0199ff;
 	}
 	#footer button:hover{

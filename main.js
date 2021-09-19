@@ -10,7 +10,7 @@ function addTask(){
 	newTask.innerHTML =`<input class="checkStatus" type="Checkbox" name="" >`;
 	//create new li to store the input value and append it to the newTask div
 	var item = document.createElement("li");
-	item.innerHTML = `${input.value}`;
+	item.innerHTML = `<input id="todoItem" type="text" value="${input.value}" readonly>`;
 	newTask.appendChild(item);
 	//create span tag to store the edit icon and append it to the li tag
 	var editButton = document.createElement("span");
@@ -29,15 +29,12 @@ function addTask(){
 		list.appendChild(newTask); 
 		input.value="";	
 	}
-	// Marks the task done(line-through) when you click once
-	newTask.addEventListener("click", function(){
-
-	})
+	
 	// Removes the task form the list when you click twice and stores it in Deleted list
-	newTask.addEventListener("dblclick", function(){
+	/*newTask.addEventListener("dblclick", function(){
 		deleted.appendChild(newTask);
 		list.removeChild(newTask);
-	})
+	})*/
 }
 
 function deleteItem(e) { 
@@ -47,7 +44,37 @@ function deleteItem(e) {
 	  bin.parentElement.remove();
   }
 }
-
+function editItem(e) { 
+		var item = e.target;
+		if(item.textContent === "save"){
+			var li = item.parentElement;
+			var input = document.getElementById("todoItem");
+			var newVal = document.createElement("input");
+			newVal.value = input.value;
+			newVal.readOnly = true;
+			newVal.id = "todoItem"
+			li.insertBefore(newVal, input);
+			li.removeChild(input);
+			item.innerHTML= `<i class="fa fa-pencil create" aria-hidden="true"></i>`;
+			item.style.padding = "0";
+		}else if(item.classList[0] === "edit"){
+			var li = item.parentElement;
+			//item.className = "newTodo";
+			var input = document.getElementById("todoItem");
+			var newInt = document.createElement("input");
+			newInt.type = "text";
+			newInt.id = "todoItem"
+			newInt.value = input.value;
+			li.insertBefore(newInt, input);
+			li.removeChild(input);
+			item.textContent = "save";
+			item.style.padding = "5px 0 0 0";
+			newInt.style.fontSize ="15px";
+			if(newInt.value == ""){
+				alert("please input something");
+			}
+		}
+}
 //EVENT LISTENERS
 
 	// Add a new task to the list when you click the "+" button
@@ -58,3 +85,4 @@ document.addEventListener("keyup", function(e){
 		addTask();
 })
 list.addEventListener("click", deleteItem);
+list.addEventListener("click", editItem);
