@@ -47,10 +47,11 @@ function deleteItem(e) {
 function editItem(e) { 
 	var item = e.target;
 	var li = item.parentNode;
+
 	if(item.classList[0] === "remove"){
 		var bin = item.parentElement;
 		bin.parentElement.remove();
-  	}
+	}
 	else if(item.textContent === "save"){
 		var input = li.firstElementChild;
 		var span = document.createElement('span');
@@ -70,19 +71,20 @@ function editItem(e) {
 		li.insertBefore(input, span);
 		li.removeChild(span);
 		item.textContent = "save";
-		item.style.padding = "5px 0 0 0";
-		newInt.style.fontSize ="16px";	
+		item.style.lineHeight = "40px";
+		input.style.fontSize ="16px";	
+		input.style.color ="red";
 	}
 }
 
 
 //EVENT LISTENERS
 
-	
 button.addEventListener("click", addTask);//Add a new task to the list when you click the "+" button
 document.addEventListener("keyup", function(e){ //Add a new task to the list when you press enter key
-	if(e.keyCode==13)
+	if(e.keyCode==13){
 		addTask();
+	}
 })
 list.addEventListener("click", deleteItem); //Deletes item 
 list.addEventListener("click", editItem); //Edit selected item
