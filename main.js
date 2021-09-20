@@ -4,7 +4,7 @@ var input = document.getElementById("input");
 var button = document.getElementById("button");
 
 //FUNCTIONS
-function addTask(){
+function addTask(){  //Add item
 	//create a new div to store checkbox, li, edit button, and remove button
 	var newTask = document.createElement("div");
 	newTask.innerHTML =`<input class="checkStatus" type="Checkbox" name="" >`;
@@ -37,14 +37,12 @@ function addTask(){
 	})*/
 }
 
-//Delete item
-function deleteItem(e) { 
+function deleteItem(e) { //Delete item
   var item = e.target;
   
 }
 
-//Edit item
-function editItem(e) { 
+function editItem(e) { //Edit item
 	var item = e.target;
 	var li = item.parentNode;
 
